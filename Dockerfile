@@ -11,7 +11,7 @@ LABEL "com.github.actions.description"="Wraps the Serverless Framework to enable
 LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
-RUN npm i -g serverless@1.54.0
 WORKDIR temp
+RUN npm i -g serverless@1.54.0
 RUN echo "${{ secrets.GCP_KEY_FILE }}" >> /credentials.json
 ENTRYPOINT ["serverless"]
