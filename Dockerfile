@@ -12,5 +12,6 @@ LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
 RUN npm i -g serverless@1.54.0
+WORKDIR temp
 RUN echo "${{ secrets.GCP_KEY_FILE }}" >> /credentials.json
 ENTRYPOINT ["serverless"]
